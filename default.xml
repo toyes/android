@@ -12,6 +12,9 @@
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="white"
+           fetch="https://git@github.com" />
+
   <default revision="refs/heads/cm-11.0"
            remote="github"
            sync-c="true"
@@ -20,8 +23,6 @@
   <project path="build" name="CyanogenMod/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-
-  <project path="android" name="CyanogenMod/android" />
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
   <project path="art" name="CyanogenMod/android_art" />
@@ -367,7 +368,6 @@
   <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" />
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
   <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
-  <project path="packages/apps/Settings" name="CyanogenMod/android_packages_apps_Settings" />
   <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" />
@@ -473,4 +473,15 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
+
+  <!-- CM-11.0 White -->
+  <project path="android" name="toyes/android" remote="white" />
+
+  <project path="device/samsung/skyrocket" name="toyes/android_device_samsung_skyrocket" remote="white" />
+  <project path="device/samsung/qcom-common" name="CyanogenMod/android_device_samsung_qcom-common" />
+  <project path="device/samsung/msm8660-common" name="CyanogenMod/android_device_samsung_msm8660-common" />
+  <project path="device/samsung/celox-common" name="CyanogenMod/android_device_samsung_celox-common" />
+  <project path="kernel/samsung/msm8660-common" name="CyanogenMod/android_kernel_samsung_msm8660-common" />
+  <project path="packages/apps/Settings" name="toyes/android_packages_apps_Settings" remote="white" />
+  <project path="vendor/samsung" name="TheMuppets/proprietary_vendor_samsung" /> 
 </manifest>
